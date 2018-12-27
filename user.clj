@@ -24,9 +24,3 @@
   (inject/in clojure.core - [clojure.tools.logging info warn error])
   (catch Throwable e
     (.printStackTrace e)))
-
-(try ;; try to inject lucid.package
-  (require 'lucid.package)
-  (inject/in clojure.core - [lucid.package pull])
-  (catch Throwable e
-    (.printStackTrace e)))

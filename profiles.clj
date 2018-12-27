@@ -1,9 +1,9 @@
 {:user {:dependencies [[clj-stacktrace "0.2.8"]]
         :plugins      [[lein-difftest "2.0.0"]]}
  :repl {:pedantic? :warn
-        :dependencies [[org.bouncycastle/bcprov-jdk15on "1.59"]
+        :dependencies [[org.bouncycastle/bcprov-jdk15on "1.48"]
                        [org.opensaml/xmltooling "1.4.4"]
-                       [zcaudate/lucid "1.4.4"]
+                       [zcaudate/lucid "1.4.4" :exclusions [org.bouncycastle/bcpg-jdk15on zcaudate/lucid.package]]
                        [org.clojure/tools.reader "1.3.2"]
                        [spyscope "0.1.7-SNAPSHOT" :exclusions [org.clojure/tools.reader]] ;; need to install locally
                        [com.google.guava/guava "22.0" :exclusions [com.google.code.findbugs/jsr305]]
